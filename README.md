@@ -19,3 +19,6 @@ To run the code, run the following command in the terminal:
 ```
 cargo run
 ```
+
+### Notes
+There are other ways to enable threading such as `rayon` with `par_iter`, but I decided to implement it without the use of external crates.
