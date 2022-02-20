@@ -2,7 +2,7 @@ use rayon::prelude::*;
 
 static THRESHOLD: usize = 4;
 
-pub fn split_work<T, R>(vector: &Vec<T>, func: fn(t: T) -> R) -> Vec<R>
+pub fn split_work<T, R>(vector: Vec<T>, func: fn(t: T) -> R) -> Vec<R>
 where T: Sync + Copy + std::fmt::Display, 
 R: Copy + std::marker::Send, {
     /// Returns a vector after applying the computational work on the input
